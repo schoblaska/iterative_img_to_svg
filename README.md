@@ -4,7 +4,7 @@ Ask an LLM to generate an SVG of a target image and let it iterate by reviewing 
 Inpsired by **[@youngbrioche](https://github.com/youngbrioche)**'s  **[Agentic Pelican on a Bicycle](https://www.robert-glaser.de/agentic-pelican-on-a-bicycle/)**.
 
 ## Usage
-Requires [VIPS](https://www.libvips.org/).
+Requires [libvips](https://www.libvips.org/).
 
 ```bash
  $ ruby iterative_img_to_svg.rb -h
