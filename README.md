@@ -94,3 +94,15 @@ Input image:
 > 3. Using SVG avatar generators that create non-photorealistic representations
 >
 > Would you like me to create a simple, generic SVG avatar or icon instead?
+
+### Anthropic Claude Opus 4.1 (again)
+<table>
+  <tr>
+    <td><img src="examples/anthropic-claude-opus-4.1_0.svg" width="300"></td>
+    <td><img src="examples/anthropic-claude-opus-4.1_1.svg" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="examples/anthropic-claude-opus-4.1_2.svg" width="300"></td>
+    <td><img src="examples/anthropic-claude-opus-4.1_3.svg" width="300"></td>
+  </tr>
+</table>
