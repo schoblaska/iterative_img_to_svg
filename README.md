@@ -1,7 +1,7 @@
 # Iterative IMG to SVG
 Ask an LLM to generate an SVG of a target image and let it iterate by reviewing a rendered version of each attempt.
 
-Inpsired by @youngbrioche 's **[Agentic Pelican on a Bicycle](https://www.robert-glaser.de/agentic-pelican-on-a-bicycle/)**.
+Inpsired by **[@youngbrioche](https://github.com/youngbrioche)**'s  **[Agentic Pelican on a Bicycle](https://www.robert-glaser.de/agentic-pelican-on-a-bicycle/)**.
 
 ## Usage
 ```bash
