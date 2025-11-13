@@ -53,12 +53,8 @@ class Converter
       svg = sanitize_response(response.content)
       latest_png_path = File.join(output, "#{model.gsub('/', '-')}_#{i}.png")
 
-      begin
-        Vips::Image.new_from_buffer(svg, "", dpi: 144)
-                   .write_to_file(latest_png_path)
-      rescue StandardError
-        puts svg
-      end
+      Vips::Image.new_from_buffer(svg, "", dpi: 144)
+                 .write_to_file(latest_png_path)
 
       File.write(latest_png_path.gsub(".png", ".svg"), svg)
     end
