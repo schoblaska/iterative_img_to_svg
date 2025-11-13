@@ -3,6 +3,7 @@ require "bundler/inline"
 gemfile do
   source "https://rubygems.org"
 
+  gem "debug"
   gem "dotenv"
   gem "ruby_llm"
   gem "slop"
@@ -48,27 +49,25 @@ class Converter
           chat.ask(message, with: [input, latest_png_path])
         end
 
-      svg = sanitize_response(response.content)
-      previous_latest_png_path = latest_png_path
+      svg = svg_from_response(response.content)
+
+      if svg.nil?
+        puts "No SVG found in response: #{response.content}"
+        response = chat.ask("No SVG found in response. Try again.", with: [input, latest_png_path])
+        svg = svg_from_response(response.content)
+      end
+
       latest_png_path = File.join(output, "#{model.gsub('/', '-')}_#{i}.png")
 
-      begin
-        Vips::Image.new_from_buffer(svg, "", dpi: 144)
-                   .write_to_file(latest_png_path)
-      rescue Vips::Error => e
-        puts "Retrying invalid SVG: #{svg}\n\nError: #{e.message}"
-        response = chat.ask("Invalid SVG. Try again. Error: #{e.message}", with: [input, previous_latest_png_path])
-        svg = sanitize_response(response.content)
-        Vips::Image.new_from_buffer(svg, "", dpi: 144)
-                   .write_to_file(latest_png_path)
-      end
+      Vips::Image.new_from_buffer(svg, "", dpi: 144)
+                 .write_to_file(latest_png_path)
 
       File.write(latest_png_path.gsub(".png", ".svg"), svg)
     end
   end
 
-  def sanitize_response(response)
-    response.gsub(/^```\S+/, "").gsub(/^```/, "").strip
+  def svg_from_response(response)
+    response[%r{<svg[^>]*>.*?</svg>}m]
   end
 
   def self.from_slop
