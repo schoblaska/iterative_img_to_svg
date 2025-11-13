@@ -1,3 +1,4 @@
 .env
 output/*.png
+output/*.svg
 input/*.png
