@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 477" width="353" height="477">
+  <defs>
+    <filter id="bg-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <radialGradient id="skin-gradient" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#e6c3b1"/>
+      <stop offset="50%" stop-color="#d6b4a1"/>
+      <stop offset="100%" stop-color="#c8a694"/>
+    </radialGradient>
+    <radialGradient id="iris-gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="20%" stop-color="#6d4c41"/>
+      <stop offset="100%" stop-color="#4e342e"/>
+    </radialGradient>
+    <pattern id="plaid-shirt" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(-15)">
+      <rect width="20" height="20" fill="#454b52"/>
+      <path d="M 0 5 H 20 M 0 15 H 20" stroke="#33383d" stroke-width="4"/>
+      <path d="M 5 0 V 20 M 15 0 V 20" stroke="#2d3237" stroke-width="4"/>
+      <path d="M 0 0 H 20 V 20 H 0 Z" stroke="#5a626a" stroke-width="1" fill="none"/>
+    </pattern>
+    <clipPath id="shirt-clip">
+      <path d="M148 290 l 28.5 28 l 28.5 -28 v 40 h -57 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="353" height="477" fill="#5f5447"/>
+  <g filter="url(#bg-blur)" opacity="0.7">
+    <ellipse cx="120" cy="180" rx="180" ry="120" fill="#a89276"/>
+    <ellipse cx="290" cy="350" rx="150" ry="90" fill="#7d6c5a"/>
+    <ellipse cx="80" cy="420" rx="100" ry="70" fill="#55473a"/>
+    <ellipse cx="280" cy="100" rx="130" ry="80" fill="#c5a88a"/>
+  </g>
+
+  <!-- Body -->
+  <g id="body">
+    <!-- Jacket -->
+    <path d="M 0 477 V 300 L 120 320 V 477 H 0 Z" fill="#4a342a"/>
+    <path d="M 353 477 V 300 L 233 320 V 477 H 353 Z" fill="#4a342a"/>
+    <path d="M 120 477 V 320 Q 176.5 305 233 320 V 477 H 120 Z" fill="#3c2a22"/>
+    <!-- Plaid Shirt -->
+    <rect x="148" y="290" width="57" height="40" fill="url(#plaid-shirt)" clip-path="url(#shirt-clip)"/>
+    <path d="M176.5 318 l 28.5 -28 h -57 l 28.5 28 Z" fill="#000" opacity="0.15"/>
+    <path d="M148 290 l 28.5 28 l 28.5 -28" fill="none" stroke="#222" stroke-width="2"/>
+    <!-- Jacket Collar -->
+    <g id="jacket-collar" fill="#6b5246">
+      <path d="M45 325 C 100 285, 130 285, 148 290 L 130 360 C 90 350, 65 345, 45 325 Z"/>
+      <path d="M308 325 C 253 285, 223 285, 205 290 L 223 360 C 263 350, 288 345, 308 325 Z"/>
+    </g>
+    <!-- Collar Texture -->
+    <g stroke="#5a4236" stroke-width="1" opacity="0.8">
+      <path d="M135 350 C 100 335 60 330 46 325 M 130 355 C 95 340 65 338 56 330"/>
+      <path d="M218 350 C 253 335 293 330 307 325 M 223 355 C 258 340 288 338 297 330"/>
+    </g>
+  </g>
+
+  <!-- Neck -->
+  <path d="M164 287 c 0 10, 6 18, 12.5 18 s 12.5 -8 12.5 -18 Z" fill="#c1a18e"/>
+
+  <!-- Head -->
+  <g id="head">
+    <path d="M102 291 C 80 200, 105 80, 176.5 75 C 248 80, 273 200, 251 291 C 220 310, 133 310, 102 291 Z" fill="url(#skin-gradient)"/>
+    <!-- Shading -->
+    <path d="M102 291 C 95 230 110 150 120 110 C 110 160 100 230 102 291Z" fill="#b08b76" opacity="0.25"/>
+    <path d="M251 291 C 258 230 243 150 233 110 C 243 160 253 230 251 291Z" fill="#b08b76" opacity="0.25"/>
+    <!-- Smile Lines -->
+    <path d="M140 245 q 8 20 4 33 M213 245 q -8 20 -4 33" stroke="#a58373" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- Beard -->
+  <g id="beard-and-mustache">
+    <path d="M105 240 C 80 270, 100 305, 176.5 304 C 253 305, 273 270, 248 240 Q 176.5 260 105 240 Z" fill="#3f2c25"/>
+    <!-- Salt & Pepper Texture-->
+    <g stroke-linecap="round" fill="none" stroke-width="1.8" opacity="0.9">
+      <path d="M110 245 q 2 -3 -1 -7 M115 242 q 2 -4 0 -8" stroke="#333" opacity="0.4"/>
+      <path d="M243 245 q -2 -3 1 -7 M238 242 q -2 -4 0 -8" stroke="#333" opacity="0.4"/>
+      <path d="M115 250 q 15 15 30 25 M120 260 q 15 12 30 20 M128 270 q 15 8 30 12 M135 280 q 15 5 30 5 M110 265 q 20 15 40 25 M115 275 q 20 12 40 20 M120 285 q 20 8 40 9 M125 295 q 20 5 40 2" stroke="#a0a0a0"/>
+      <path d="M238 250 q -15 15 -30 25 M233 260 q -15 12 -30 20 M225 270 q -15 8 -30 12 M218 280 q -15 5 -30 5 M243 265 q -20 15 -40 25 M238 275 q -20 12 -40 20 M233 285 q -20 8 -40 9 M228 295 q -20 5 -40 2" stroke="#a0a0a0"/>
+      <path d="M150 270 q 26.5 6 53 0 M153 278 q 23.5 5 47 0 M158 285 q 19 4 38 0 M165 292 q 12 3 24 0" stroke="#cccccc" stroke-width="2"/>
+    </g>
+  </g>
+  
+  <!-- Mouth -->
+  <path d="M160 275 a 17 8 0 0 1 34 0" stroke="#8c6d62" stroke-width="2" fill="#7a5a52"/>
+    
+  <!-- Nose -->
+  <g id="nose">
+    <path d="M176.5,230 C 168,230, 166,252, 176.5,253 C 187,252, 185,230, 176.5,230 Z" fill="#000" opacity="0.04"/>
+    <path d="M176.5 232 L 184 251 C 183 253 170 253 169 251 Z" fill="#dbc0af"/>
+    <path d="M176.5 232 L 169 251" stroke="#b28a7a" fill="none" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+    <ellipse cx="170" cy="250" rx="3.5" ry="1.5" fill="#6e4f45" opacity="0.8"/>
+    <ellipse cx="183" cy="250" rx="3.5" ry="1.5" fill="#6e4f45" opacity="0.8"/>
+  </g>
+
+  <!-- Hair -->
+  <g id="hair">
+     <path d="M98,180 C 78,110, 110,70, 176.5,75 C 243,70, 275,110, 255,180 C 255,100, 220,75, 176.5,78 C 133,75, 98,100, 98,180z" fill="#3f2c25"/>
+     <path d="M100 170 C 90 110 120 80 130 90 L 115 170Z M253 170 C 263 110 233 80 223 90 L 238 170Z" fill="#c0c0c0"/>
+     <g stroke-linecap="round" fill="none" opacity="0.7" stroke-width="2.5">
+        <path d="M115 160 C 125 130, 140 110, 155 100 M125 150 c 10 -15 20-25 30-30" stroke="#b0b0b0" />
+        <path d="M238 160 C 228 130, 213 110, 198 100 M228 150 c -10 -15 -20-25 -30-30" stroke="#b0b0b0"/>
+     </g>
+     <path d="M176.5,75 C 170,85, 155,95, 145,85 M205 80 c -10 5, -20 8, -28 4" stroke="#2a1f1b" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <!-- Eyes -->
+  <g id="eyes" transform="translate(0, 3)">
+    <!-- eye sockets -->
+    <path d="M130,185 a 21,11 0 1 1 42,0 a 21,11 0 1 1 -42,0 Z M181,185 a 21,11 0 1 1 42,0 a 21,11 0 1 1 -42,0 Z" fill="#b58d7a"/>
+    <!-- Left Eye -->
+    <g transform="translate(150, 192)">
+      <path d="M-17 -2.5 c 4 6, 29 6, 33 0 c -4 -7, -29 -7, -33 0" fill="#e8e8e8"/>
+      <ellipse cx="-0.5" cy="-0.5" rx="6" ry="6" fill="url(#iris-gradient)"/>
+      <circle cx="-0.5" cy="-0.5" r="2.5" fill="#212121"/>
+      <circle cx="1.5" cy="-2.5" r="1.5" fill="#FFF" opacity="0.9"/>
+      <path d="M-17 -2.5 Q -0.5 -7 16 -2.5" stroke="#9f8275" stroke-width="1.2" fill="none"/>
+    </g>
+    <!-- Right Eye -->
+    <g transform="translate(202, 192)">
+      <path d="M-17 -2.5 c 4 6, 29 6, 33 0 c -4 -7, -29 -7, -33 0" fill="#e8e8e8"/>
+      <ellipse cx="0.5" cy="-0.5" rx="6" ry="6" fill="url(#iris-gradient)"/>
+      <circle cx="0.5" cy="-0.5" r="2.5" fill="#212121"/>
+      <circle cx="2.5" cy="-2.5" r="1.5" fill="#FFF" opacity="0.9"/>
+      <path d="M-17 -2.5 Q 0.5 -7 16 -2.5" stroke="#9f8275" stroke-width="1.2" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Eyebrows -->
+  <g id="eyebrows" stroke-linecap="round" fill="none" stroke="#4a3f3a" stroke-width="5">
+    <path d="M130 181 c 10 -6 25 -5 32 1"/>
+    <path d="M223 181 c -10 -6 -25 -5 -32 1"/>
+  </g>
+
+  <!-- Glasses -->
+  <g id="glasses" stroke="#2a2a2a" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Rims -->
+    <path d="M125,207 q -25 -1 -28 -13 q -2 -10 3 -15 q 8 -8 28 -7 l 25 2 q 25 1 28 13 q 2 10 -3 15 q -8 8 -28 7 Z" transform="rotate(-1 151 185)"/>
+    <path d="M178,207 q -25 -1 -28 -13 q -2 -10 3 -15 q 8 -8 28 -7 l 25 2 q 25 1 28 13 q 2 10 -3 15 q -8 8 -28 7 Z" transform="rotate(1 202 185)"/>
+    <!-- Bridge and Arms -->
+    <path d="M176 195 h 5" stroke-width="5"/>
+    <path d="M123 194 L 80 180" stroke-width="5.5"/>
+    <path d="M229 194 L 272 180" stroke-width="5.5"/>
+    <!-- Lenses with Glare -->
+    <g opacity="0.25">
+       <path d="M133 188 a 30 50 -45 0 1 22 18" stroke="#fff" stroke-width="2" />
+    </g>
+  </g>
+</svg>

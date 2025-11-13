@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 477" width="353" height="477">
+  <defs>
+    <filter id="bg-blur">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <radialGradient id="skin-gradient" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#f0ccb6"/>
+      <stop offset="100%" stop-color="#d1b098"/>
+    </radialGradient>
+    <pattern id="plaid-shirt" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(5)">
+      <rect width="10" height="10" fill="#454a4d"/>
+      <path d="M-1 2 l 12 0" stroke="#333536" stroke-width="2.5"/>
+      <path d="M-1 7 l 12 0" stroke="#6a7073" stroke-width="1.5"/>
+      <path d="M2 -1 l 0 12" stroke="#333536" stroke-width="2.5"/>
+      <path d="M7 -1 l 0 12" stroke="#6a7073" stroke-width="1.5"/>
+    </pattern>
+    <filter id="texture" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.04 0" result="alphanoise"/>
+      <feComposite in="SourceGraphic" in2="alphanoise" operator="in" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <g filter="url(#bg-blur)">
+    <rect width="353" height="477" fill="#88794a"/>
+    <ellipse cx="80" cy="150" rx="180" ry="250" fill="#bfae6b" opacity="0.7"/>
+    <ellipse cx="300" cy="300" rx="150" ry="200" fill="#a08c51" opacity="0.6"/>
+  </g>
+
+  <!-- Clothing -->
+  <g id="clothing">
+    <!-- Jacket -->
+    <path d="M40 330 L30 477 L323 477 L313 330 C 250 280, 100 280, 40 330 Z" fill="#4b382e"/>
+    <!-- Jacket Lapels/Collar -->
+    <path d="M165 310 C 130 285, 60 295, 40 330 L 45 350 C 70 310, 130 300, 168 315 Z" fill="#896a55"/>
+    <path d="M188 310 C 223 285, 293 295, 313 330 L 308 350 C 283 310, 223 300, 185 315 Z" fill="#896a55"/>
+    <path d="M165 310 L168 315 L185 315 L188 310 Z" fill="#454a4d"/>
+    <!-- Jacket Shadows -->
+    <path d="M176.5 315 V 477 h -20 L 153 325 a 100 80 0 0 0 3.5 -10 z" fill="#3a2c24" opacity="0.7"/>
+    <path d="M176.5 315 V 477 h 20 L 200 325 a 100 80 0 0 1 -3.5 -10 z" fill="#3a2c24" opacity="0.7"/>
+    <!-- Plaid Shirt -->
+    <path d="M156.5 313 L150 477 h 53 l -6.5 -164 z" fill="url(#plaid-shirt)"/>
+  </g>
+  
+  <g filter="url(#texture)">
+
+    <!-- Neck -->
+    <path d="M160 285 C 150 310, 203 310, 193 285 L 176.5 280 Z" fill="#c4a892"/>
+    <path d="M160,285 C165,305 188,305 193,285 C 185,295 168,295 160,285 Z" fill="#b29581"/>
+
+    <!-- Head -->
+    <g id="head">
+      <!-- Face Shape -->
+      <path d="M115,295 C 80,220, 100,70, 176.5,60 C 253,70, 273,220, 238,295 C 220,315, 133,315, 115,295 Z" fill="url(#skin-gradient)"/>
+      <!-- Face Shading -->
+      <path d="M115,295 C 133,260, 130,160, 118,150 C 100,160, 90,240, 115,295" fill="#d1b098" opacity="0.7"/>
+      <path d="M238,295 C 220,260, 223,160, 235,150 C 253,160, 263,240, 238,295" fill="#d1b098" opacity="0.7"/>
+      <path d="M130,140 C 150,125, 203,125, 223,140 L 176.5 135 Z" fill="#e0bca2" opacity="0.5"/>
+       <!-- Ears -->
+      <path d="M110 190 c 0,-20 -15,-30 -20,-15 c -8,25 8,45 20,40 c 5,-2 -2,-20 -2,-20z" fill="#d1b098"/>
+      <path d="M243 190 c 0,-20 15,-30 20,-15 c 8,25 -8,45 -20,40 c -5,-2 2,-20 2,-20z" fill="#d1b098"/>
+    </g>
+
+    <!-- Beard -->
+    <g id="beard">
+        <path d="M118,225 C 90,270, 115,310, 176.5,312 C 238,310, 263,270, 235,225 C 210,245, 143,245, 118,225z" fill="#6a5f5a"/>
+        <path d="M142,245 C 130,300, 176.5,300, 211,245 L 176.5 225 Z" fill="#4d423e" opacity="0.6"/>
+        <g stroke-linecap="round" fill="none" opacity="0.5">
+            <path d="M135 290 q 41.5 15 83 0" stroke="#b0b0b0" stroke-width="20"/>
+            <path d="M140 292 q 36.5 12 73 0" stroke="#e0e0e0" stroke-width="15"/>
+            <path d="M125 240 q 51.5 25 103 0" stroke="#4d423e" stroke-width="10"/>
+        </g>
+    </g>
+
+    <!-- Mouth -->
+    <path d="M148,258 a 30 10 0 0 0 57 0 a 30 15 0 0 1 -57 0" fill="#8a5d58"/>
+    <path d="M152,257 a 25 6 0 0 1 50 0" fill="#f0e9e1" opacity="0.9"/>
+    
+    <!-- Nose -->
+    <path d="M176.5,205 C 165,220, 170,248, 176.5,248 C 183,248, 188,220, 176.5,205z" fill="#d1b098"/>
+    <path d="M168,205 L176.5,248 L185,205" stroke="#bc9e88" fill="none" stroke-width="1"/>
+    <path d="M172,240 a 3 2 0 1 0 0 1" fill="#ac8d7a" opacity="0.8"/>
+    <path d="M181,240 a 3 2 0 1 1 0 1" fill="#ac8d7a" opacity="0.8"/>
+
+    <!-- Eyes -->
+    <g id="eyes" transform="translate(0, 5)">
+      <!-- Eye Bags/Shading -->
+      <path d="M125,190 C 135,200 155,200 165,190 C 155,195 135,195 125,190" fill="#c9ae96" opacity="0.8"/>
+      <path d="M188,190 C 198,200 218,200 228,190 C 218,195 198,195 188,190" fill="#c9ae96" opacity="0.8"/>
+      <!-- Left Eye -->
+      <ellipse cx="145" cy="190" rx="14" ry="10" fill="#f0e8e0"/>
+      <circle cx="143" cy="190" r="7" fill="#63788a"/>
+      <circle cx="142" cy="189" r="3.5" fill="#1a1a1a"/>
+      <circle cx="143.5" cy="188" r="1.5" fill="#fff"/>
+      <!-- Right Eye -->
+      <ellipse cx="208" cy="190" rx="14" ry="10" fill="#f0e8e0"/>
+      <circle cx="210" cy="190" r="7" fill="#63788a"/>
+      <circle cx="211" cy="189" r="3.5" fill="#1a1a1a"/>
+      <circle cx="210" cy="188" r="1.5" fill="#fff"/>
+    </g>
+
+    <!-- Eyebrows -->
+    <path d="M120,175 C 130,168, 155,168, 162,176" stroke="#4d423e" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M233,175 C 223,168, 198,168, 191,176" stroke="#4d423e" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M125,174 C 135,169, 150,170, 158,175" stroke="#9a9a9a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M228,174 C 218,169, 203,170, 195,175" stroke="#9a9a9a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Hair -->
+    <g id="hair">
+      <path d="M100,175 C 80,110, 120,50, 176.5,60 C 233,50, 273,110, 253,175 C 240,110, 210,75, 176.5,75 C 143,75, 113,110, 100,175z" fill="#443a35"/>
+      <path d="M100,175 C 110,130, 130,85, 176.5,75" stroke="#9a9a9a" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.6"/>
+      <path d="M253,175 C 243,130, 223,85, 176.5,75" stroke="#9a9a9a" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.6"/>
+      <path d="M176.5,60 C 170,80, 160,95, 148,88" stroke="#333" stroke-width="5" fill="none" stroke-linecap="round"/>
+    </g>
+
+  </g>
+
+  <!-- Glasses -->
+  <g id="glasses" fill="none" stroke="#252525" stroke-width="7" stroke-linecap="round">
+    <path d="M110,195 h -20"/>
+    <path d="M243,195 h 20"/>
+    <path d="M165,195 c-4,-20 8,-28 40,-24 l0,-5 -83,-1 0,5 c32,-4 44,4 43,25"/>
+    <path d="M125,195.5 C120,180 125,170 145,170 C 165,170 165,183 161,195.5 C 158,207 130,207 125,195.5z"/>
+    <path d="M228,195.5 C233,180 228,170 208,170 C 188,170 188,183 192,195.5 C 195,207 223,207 228,195.5z"/>
+  </g>
+  <rect x="235" y="171" width="3" height="3" fill="#fff" stroke="none" opacity="0.2" transform="rotate(10 235 171)"/>
+
+</svg>

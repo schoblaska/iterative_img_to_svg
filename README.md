@@ -106,3 +106,23 @@ Input image:
     <td><img src="examples/anthropic-claude-opus-4.1_3.svg" width="300"></td>
   </tr>
 </table>
+
+### Google Gemini 2.5 Pro (n = 8)
+<table>
+  <tr>
+    <td><img src="examples/google-gemini-2.5-pro_take-2_0.png" width="300"></td>
+    <td><img src="examples/google-gemini-2.5-pro_take-2_1.png" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="examples/google-gemini-2.5-pro_take-2_2.png" width="300"></td>
+    <td><img src="examples/google-gemini-2.5-pro_take-2_3.png" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="examples/google-gemini-2.5-pro_take-2_4.png" width="300"></td>
+    <td><img src="examples/google-gemini-2.5-pro_take-2_5.png" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="examples/google-gemini-2.5-pro_take-2_6.png" width="300"></td>
+    <td><img src="examples/google-gemini-2.5-pro_take-2_7.png" width="300"></td>
+  </tr>
+</table>

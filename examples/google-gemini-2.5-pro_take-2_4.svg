@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 477" width="353" height="477">
+  <defs>
+    <radialGradient id="bg-gradient" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#a58d6b"/>
+      <stop offset="50%" stop-color="#6a5843"/>
+      <stop offset="100%" stop-color="#4a4135"/>
+    </radialGradient>
+    <linearGradient id="skin-gradient" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#e3bfab"/>
+      <stop offset="100%" stop-color="#c8a089"/>
+    </linearGradient>
+    <pattern id="plaid-shirt" patternUnits="userSpaceOnUse" width="12" height="12">
+      <rect width="12" height="12" fill="#4a525a"/>
+      <path d="M-1 6 l 14 0" stroke="#3c424a" stroke-width="4"/>
+      <path d="M6 -1 l 0 14" stroke="#32383d" stroke-width="4"/>
+    </pattern>
+    <g id="beard-texture" stroke-linecap="round" fill="none">
+        <path d="M115 245 q 10 15 20 25 M120 255 q 10 12 20 20 M128 265 q 10 8 20 12 M110 260 q 15 15 30 25 M115 270 q 15 12 30 20"/>
+        <path d="M238 245 q -10 15 -20 25 M233 255 q -10 12 -20 20 M225 265 q -10 8 -20 12 M243 260 q -15 15 -30 25 M238 270 q -15 12 -30 20"/>
+    </g>
+  </defs>
+
+  <!-- Background -->
+  <rect width="353" height="477" fill="url(#bg-gradient)"/>
+  
+  <!-- Body and Clothing -->
+  <g id="body">
+    <!-- Jacket Body -->
+    <path d="M20 320 Q 50 310 100 320 L 100 477 L 0 477 L 20 320 Z" fill="#4d3b32"/>
+    <path d="M333 320 Q 303 310 253 320 L 253 477 L 353 477 L 333 320 Z" fill="#4d3b32"/>
+    <path d="M100 320 Q 176.5 295 253 320 L 253 477 L 100 477 Z" fill="#44342c"/>
+
+    <!-- Plaid Shirt Collar -->
+    <path d="M155 290 L 176.5 320 L 198 290 L 185 288 C 176.5 285 168 285 155 290 Z" fill="url(#plaid-shirt)"/>
+    <path d="M155 290 L 176.5 320 L 198 290 L 176.5 300 Z" fill="black" opacity="0.2"/>
+
+    <!-- Jacket Collar -->
+    <g id="jacket-collar">
+       <path d="M35 320 C 80 285, 120 285, 155 290 L 150 340 C 90 330, 60 335, 35 320 Z" fill="#5d483f"/>
+       <path d="M318 320 C 273 285, 233 285, 198 290 L 203 340 C 263 330, 293 335, 318 320 Z" fill="#5d483f"/>
+       <!-- Collar shadow and texture -->
+       <path d="M150 340 C 90 330, 60 335, 35 320 L 38 323 C 63 337, 92 332, 149 341 Z" fill="black" opacity="0.15"/>
+       <path d="M203 340 C 263 330, 293 335, 318 320 L 315 323 C 290 337, 261 332, 204 341 Z" fill="black" opacity="0.15"/>
+       <path d="M50 325 L 145 338 M60 328 L 140 339 M303 325 L 208 338 M293 328 L 213 339" stroke="#4a3931" stroke-width="2" opacity="0.5"/>
+    </g>
+  </g>
+  
+  <!-- Neck -->
+  <path d="M165 285 C 160 300, 193 300, 188 285 L 176.5 282 Z" fill="#c49e87"/>
+
+  <!-- Head -->
+  <g id="head">
+    <path d="M100,295 C 80,200, 100,70, 176.5,65 C 253,70, 273,200, 253,295 C 220,310, 133,310, 100,295 Z" fill="url(#skin-gradient)"/>
+    <path d="M100,295 C 90,230, 105,150, 120,100 C 110,160 100,230, 100,295" fill="#af8670" opacity="0.5"/>
+    <path d="M253,295 C 263,230, 248,150, 233,100 C 243,160, 253,230, 253,295" fill="#af8670" opacity="0.5"/>
+    <path d="M125 240 Q 135 265 140 270 M228 240 Q 218 265 213 270" stroke="#b58d7a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Beard -->
+  <g id="beard">
+    <path d="M105,235 C 85,270, 100,305, 176.5,304 C 253,305, 268,270, 248,235 C 220,255, 133,255, 105,235z" fill="#554a44"/>
+    <path d="M140,265 C 150,272, 203,272, 213,265 L 176.5 260 Z" fill="#4a3f3a"/>
+    <use href="#beard-texture" stroke="#a0a0a0" stroke-width="3.5" opacity="0.6"/>
+    <use href="#beard-texture" stroke="#cccccc" stroke-width="2.5" opacity="0.8"/>
+    <use href="#beard-texture" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
+    <path d="M176.5 280 q -5 10 -2 15 q 3 5 5 0 z M176.5 280 q 5 10 2 15 q -3 5 -5 0 z" fill="#dfdfdf" opacity="0.8"/>
+    <path d="M176.5 285 q -4 8 -1 12 M176.5 285 q 4 8 1 12" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <path d="M145 268 q 31.5 8 63 0" stroke-width="4" stroke="#888" fill="none" stroke-linecap="round"/>
+    <path d="M148 267 q 28.5 7 57 0" stroke-width="3" stroke="#ccc" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Mouth -->
+  <path d="M150,270 a 30 8 0 0 1 53 0 a 1 1 0 0 0 -53 0" fill="#a57c70"/>
+  <path d="M152,270 a 28 6 0 0 1 49 0" fill="#3d3532" opacity="0.5"/>
+    
+  <!-- Nose -->
+  <g id="nose">
+    <path d="M176.5,220 C 168,225, 166,252, 176.5,252 C 187,252, 185,225, 176.5,220z" fill="black" opacity="0.05"/>
+    <path d="M185,225 c -2,8 -6,22 -9.5,27" stroke="#b38878" fill="none" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M176.5 220 L 176.5 245" stroke="#e3bfab" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="170" cy="248" rx="3.5" ry="1.5" fill="#a1887f" opacity="0.7"/>
+    <ellipse cx="183" cy="248" rx="3.5" ry="1.5" fill="#a1887f" opacity="0.7"/>
+  </g>
+
+  <!-- Hair -->
+  <g id="hair" stroke-linecap="round" fill="none">
+     <path d="M98,180 C 78,110, 110,55, 176.5,65 C 243,55, 275,110, 255,180 C 255,100, 220,75, 176.5,78 C 133,75, 98,100, 98,180z" fill="#302825"/>
+     <path d="M210 75 c -10 5, -20 8, -33 4" stroke="#1a1412" stroke-width="5"/>
+     <path d="M176.5,65 C 170,80, 155,95, 140,85" stroke="#1a1412" stroke-width="6"/>
+     <g opacity="0.7">
+        <path d="M100 165 c 15 -30, 30 -55, 50 -65" stroke="#a0a0a0" stroke-width="8"/>
+        <path d="M103 155 c 10 -20, 25 -40, 40 -48" stroke="#cccccc" stroke-width="6"/>
+        <path d="M110 135 A 40 40 0 0 1 100 170" stroke="#bababa" stroke-width="4"/>
+     </g>
+     <g opacity="0.6">
+        <path d="M253 145 c -15 -20, -30 -35, -50 -45" stroke="#a0a0a0" stroke-width="7"/>
+        <path d="M248 135 c -10 -15, -25 -30, -40 -38" stroke="#cccccc" stroke-width="5"/>
+     </g>
+  </g>
+  
+  <!-- Eyebrows -->
+  <g id="eyebrows" stroke-linecap="round" fill="none" stroke="#4a3f3a" stroke-width="7">
+    <path d="M120,180 C 135,172, 158,173, 165,182"/>
+    <path d="M233,180 C 218,172, 195,173, 188,182"/>
+  </g>
+
+  <!-- Eyes - drawn under glasses -->
+  <g id="eyes">
+    <path d="M123,195 C 130,205 165,205 172,195 C 165,198, 130,198, 123,195 M181,195 C 188,205 223,205 230,195 C 223,198, 188,198, 181,195" fill="#b58d7a"/>
+    <g transform="translate(148, 192)">
+      <path d="M-15 0 c 5 7, 25 7, 30 0, -5 -8, -25 -8, -30 0" fill="#F5F5F5"/>
+      <ellipse cx="0" cy="0.5" rx="6" ry="6" fill="#4a342a"/>
+      <circle cx="0" cy="0" r="2.5" fill="#111"/>
+      <circle cx="1.5" cy="-1.5" r="1.5" fill="#FFF" opacity="0.9"/>
+    </g>
+    <g transform="translate(205, 192)">
+       <path d="M-15 0 c 5 7, 25 7, 30 0, -5 -8, -25 -8, -30 0" fill="#F5F5F5"/>
+      <ellipse cx="0" cy="0.5" rx="6" ry="6" fill="#4a342a"/>
+      <circle cx="0" cy="0" r="2.5" fill="#111"/>
+      <circle cx="1.5" cy="-1.5" r="1.5" fill="#FFF" opacity="0.9"/>
+    </g>
+  </g>
+
+  <!-- Glasses - drawn over eyes -->
+  <g id="glasses" stroke-linecap="round">
+    <g fill="none" stroke="#212121" stroke-width="7">
+      <path d="M120,195 Q 115 175, 148,172 Q 175 175, 170,195 Q 165 208, 125 208 Q 120 205, 120, 195 Z"/>
+      <path d="M233,195 Q 238 175, 205,172 Q 178 175, 183,195 Q 188 208, 228 208 Q 233 205, 233,195 Z"/>
+      <path d="M170,188 Q 176.5 185, 183,188" stroke-width="6"/>
+      <path d="M120,188 L 85,178" />
+      <path d="M233,188 L 268,178" />
+    </g>
+    <path d="M185 178 a 60 80 -20 0 0 28 25" stroke="#fff" stroke-width="3" opacity="0.2" fill="none"/>
+  </g>
+</svg>
