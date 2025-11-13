@@ -71,7 +71,7 @@ class Converter
   end
 
   def self.from_slop
-    opts ||= Slop.parse do |o|
+    opts = Slop.parse do |o|
       o.string "-i", "--input", "Input image file", required: true
       o.string "-o", "--output", "Output directory", default: "./output"
       o.string "-m", "--model", "Model", default: "anthropic/claude-sonnet-4.5"
@@ -79,10 +79,7 @@ class Converter
       o.string "-p", "--provider", "Model provider", default: "openrouter"
 
       o.on "-h", "--help" do
-        puts
-        puts "Add your provider API key to `.env`"
-        puts
-        puts o
+        puts "\nAdd your provider API key to `.env`\n\n#{o}\n"
         exit
       end
     end
