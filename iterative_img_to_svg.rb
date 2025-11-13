@@ -51,8 +51,16 @@ class Converter
       svg = sanitize_response(response.content)
       latest_png_path = File.join(output, "#{model.gsub('/', '-')}_#{i}.png")
 
-      Vips::Image.new_from_buffer(svg, "", dpi: 144)
-                 .write_to_file(latest_png_path)
+      begin
+        Vips::Image.new_from_buffer(svg, "", dpi: 144)
+                   .write_to_file(latest_png_path)
+      rescue Vips::Error => e
+        puts "Retrying invalid SVG: #{svg}\n\nError: #{e.message}"
+        response = chat.ask("Invalid SVG. Try again. Error: #{e.message}")
+        svg = sanitize_response(response.content)
+        Vips::Image.new_from_buffer(svg, "", dpi: 144)
+                   .write_to_file(latest_png_path)
+      end
 
       File.write(latest_png_path.gsub(".png", ".svg"), svg)
     end
