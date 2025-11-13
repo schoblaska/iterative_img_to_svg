@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require "bundler/inline"
 
 gemfile do
@@ -14,13 +12,13 @@ end
 Dotenv.load
 
 class Converter
-  attr_reader :input, :output, :model, :loops, :provider
+  attr_reader :input, :output, :model, :iterations, :provider
 
-  def initialize(input:, output:, model:, loops:, provider:)
+  def initialize(input:, output:, model:, iterations:, provider:)
     @input = input
     @output = output
     @model = model
-    @loops = loops
+    @iterations = iterations
     @provider = provider
   end
 
@@ -28,7 +26,7 @@ class Converter
     svg = nil
     latest_png_path = nil
 
-    loops.times do |i|
+    iterations.times do |i|
       chat = RubyLLM.chat(model: model, provider: provider, assume_model_exists: true)
                     .with_instructions("Respond only with valid SVG")
 
