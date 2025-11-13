@@ -59,10 +59,10 @@ class Converter
 
       latest_png_path = File.join(output, "#{model.gsub('/', '-')}_#{i}.png")
 
+      File.write(latest_png_path.gsub(".png", ".svg"), svg)
+
       Vips::Image.new_from_buffer(svg, "", dpi: 144)
                  .write_to_file(latest_png_path)
-
-      File.write(latest_png_path.gsub(".png", ".svg"), svg)
     end
   end
 
