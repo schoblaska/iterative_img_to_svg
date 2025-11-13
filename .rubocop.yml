@@ -24,6 +24,9 @@ Style/StringLiterals:
 Style/MutableConstant:
   Enabled: false
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Style/NumericPredicate:
   Enabled: false
 
