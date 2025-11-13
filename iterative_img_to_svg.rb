@@ -73,10 +73,13 @@ class Converter
       o.string "-i", "--input", "Input image file", required: true
       o.string "-o", "--output", "Output directory", default: "./output"
       o.string "-m", "--model", "Model", default: "anthropic/claude-sonnet-4.5"
-      o.integer "-l", "--loops", "Number of agent loops / iterations", default: 4
+      o.integer "-n", "--iterations", "Number of iterations", default: 4
       o.string "-p", "--provider", "Model provider", default: "openrouter"
 
       o.on "-h", "--help" do
+        puts
+        puts "Add your provider API key to `.env`"
+        puts
         puts o
         exit
       end
